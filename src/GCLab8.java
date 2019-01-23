@@ -28,7 +28,9 @@ public class GCLab8 {
 		String userCont = "yes";
 		String knowMore = "yes";
 		int userInput = 0;
+		
 		System.out.println("Welcome to our Java class.");
+		
 		do {
 			do {
 				System.out.println("Which student would you like to learn more about? (enter a number 1-17):");
@@ -42,7 +44,7 @@ public class GCLab8 {
 					scnr.nextLine();
 				}
 			} while (userInput <= 0 || userInput >= 18);
-			System.out.println(userInput);
+			
 			do {
 				System.out.println("What would you like to know about " + names[userInput - 1]
 						+ "? (enter \"hometown\" or \"favorite food\")");
@@ -62,11 +64,13 @@ public class GCLab8 {
 					System.out.println("That data does not exist. Please try again.");
 				}
 			} while (knowMore.equalsIgnoreCase("yes"));
+			
 			System.out.println(
 					"Would you like to know about another student? (enter \"yes\" to continue or anything else to quit");
 			userCont = scnr.nextLine();
 
 		} while (userCont.equalsIgnoreCase("yes"));
+		
 		System.out.println("Thanks for getting to know our class! Goodbye.");
 		scnr.close();
 
